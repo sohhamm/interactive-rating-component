@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+  --primary-color: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  /* l => light; m => medium; d =>  dark ; vd => very dark*/
+  --l-grey: hsl(217, 12%, 63%);
+  --m-grey: hsl(216, 12%, 54%);
+  --d-blue: hsl(213, 19%, 18%);
+  --vd-blue: hsl(216, 12%, 8%);
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: var(--vd-blue);
+  color: white;
+  font-family: 'Overpass', sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--d-blue);
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+}
