@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 :root {
-  --primary-color: hsl(25, 97%, 53%);
+  --primary: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
   /* l => light; m => medium; d =>  dark ; vd => very dark*/
   --l-grey: hsl(217, 12%, 63%);
@@ -43,8 +43,65 @@ h4 {
 }
 
 .card {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  padding: 32px;
+  max-width: 412px;
+  border-radius: 30px;
+}
+
+.circle {
   background-color: var(--d-blue);
-  padding: 20px;
-  width: 300px;
-  border-radius: 12px;
+  border-radius: 100%;
+  width: 51px;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--m-grey);
+}
+
+#star {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 35px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--l-grey);
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+button {
+  margin-top: 32px;
+  background-color: var(--primary);
+  width: 100%;
+  border: 0;
+  color: white;
+  font-size: 15px;
+  padding: 17px 0;
+  border-radius: 22.5px;
+  font-weight: 700;
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 0px 20px;
+  }
+  .card {
+    max-width: 100%;
+  }
 }
