@@ -119,9 +119,6 @@ button:hover {
   color: var(--primary);
 }
 
-.thank-you-illustration {
-}
-
 .image-box {
   display: flex;
   justify-content: center;
