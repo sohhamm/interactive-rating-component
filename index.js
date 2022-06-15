@@ -11,19 +11,22 @@ ratings.forEach(rating => {
   rating.addEventListener('click', event => {
     currentRating = +event.target.innerText
     if (currentRating) {
-      removeSelectedClass()
+      ratings.forEach(r => r.classList.remove('selected'))
     }
     event.target.classList.add('selected')
   })
 })
 
-function removeSelectedClass() {
-  ratings.forEach(r => r.classList.remove('selected'))
-}
-
 submitBtn.addEventListener('click', () => {
+  if (!currentRating) {
+    alert('Please select a rating')
+    return
+  }
   isSubmitted = true
   card.remove()
   cardFinal.style.opacity = 1
+  cardFinal.style.position = 'static'
+  cardFinal.style.zIndex = 0
+  cardFinal.style.padding = '45px 38.5px'
   ratingChip.innerHTML = `You selected ${currentRating} out of 5`
 })
